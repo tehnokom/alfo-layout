@@ -1,0 +1,73 @@
+/* Адаптивность
+=========================================================== */
+@media screen and (max-width: 1000px)
+{
+
+
+	/* Мобильное меню
+	=========================================================== */
+    .m_sidebar { display: block; position: fixed; top: 0; bottom: 0; left: -250px; width: 250px; padding: 11px 0 20px 0; white-space: nowrap; background-color: #04202B; overflow-x: hidden; overflow-y: auto; box-shadow: inset -30px 0 30px -30px rgba(0,0,0,0.5); transition: 0.3s all; }
+    .m_sidebar.open { left: 0; }
+
+        .m_sidebar > * { margin-left: 300px; opacity: 0; transition: 0.3s all; }
+        .m_sidebar.open > * { margin-left: 0; opacity: 1; }
+
+        .m_sidebar__menu { position: relative; margin-bottom: 15px; }
+            .m_sidebar__menu__item { display: block; position: relative; height: 40px; padding: 0 20px; font-size: 16px; color: #fff; line-height: 40px; text-decoration: none; }
+			.m_sidebar__menu__item:hover { cursor: pointer; color: #fff; background-color: rgba(41,171,226,0.15); }
+			.m_sidebar__menu__item:active { color: #fff; background-color: rgba(0,0,0,0.3); }
+			.m_sidebar__menu__item.active { cursor: default; color: #fff; background-color: rgba(41,171,226,0.5); }
+
+
+	/* Блок по центру
+	=========================================================== */
+	.g_inner { min-width: 280px; max-width: 1240px; }
+
+
+	/* Основной блок
+	=========================================================== */
+	.l_base { position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: auto; height: auto; transition: 0.3s all; }
+	.m_sidebar.open + .l_base { right: -250px; left: 250px; }
+
+
+		/* Шапка
+		=========================================================== */
+		.l_header { height: 60px; transition: 0.3s all; }
+		.m_sidebar.open + .l_base .l_header { right: -250px; left: 250px; }
+			.l_header > .g_inner { height: 60px; }
+
+				.header > .g_inner > * {  }
+
+				.m_menu_trigger { display: block; position: absolute; top: 0; bottom: 0; left: 0; width: 60px; background: none; border: none; transition: 0.3s all; }
+				.m_menu_trigger:hover { cursor: pointer; }
+				.m_menu_trigger:focus { outline: none; }
+					.m_menu_trigger > span,
+					.m_menu_trigger::before,
+					.m_menu_trigger::after { display: block; position: absolute; top: 50%; left: 50%; width: 24px; height: 2px; margin: -1px 0 0 -12px; background-color: #fff; transition: 0.3s all linear; }
+					.m_menu_trigger::before,
+					.m_menu_trigger::after { content: ' '; }
+					.m_menu_trigger::before { margin-top: -7px; }
+					.m_menu_trigger::after { margin-top: 5px; }
+
+					.m_menu_trigger:hover > span,
+					.m_menu_trigger:hover::before,
+					.m_menu_trigger:hover::after { background-color: #00ABF8; }
+
+					.m_menu_trigger:active > span,
+					.m_menu_trigger:active::before,
+					.m_menu_trigger:active::after { background-color: #00ABF8; }
+
+					.m_sidebar.open + .l_base .m_menu_trigger > span { -webkit-transform: rotate(180deg); -ms-transform: rotate(180deg); -o-transform: rotate(180deg); -moz-transform: rotate(180deg); transform: rotate(180deg); }
+					.m_sidebar.open + .l_base .m_menu_trigger::before { width: 12px; margin-top: -5px; margin-left: -14px; -webkit-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -o-transform: rotate(-45deg); -moz-transform: rotate(-45deg); transform: rotate(-45deg); }
+					.m_sidebar.open + .l_base .m_menu_trigger::after { width: 12px; margin-top: 3px; margin-left: -14px; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); -moz-transform: rotate(45deg); transform: rotate(45deg); }
+
+
+		/* Контент
+		=========================================================== */
+		.l_content {  }
+
+			.l_content > .g_inner {  }
+				.l_content__main {  }
+
+
+}

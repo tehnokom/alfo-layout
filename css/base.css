@@ -1,3 +1,35 @@
+/*
+
+
+Структура файлов CSS:
+css/style.css - сборка всех стилей
+css/base.css - базовые сбросы
+css/layout.css - лэйаут страниц
+css/layout_responsibility.css - адаптивность лэйаута
+css/components/... - стили UI-элементов (разбиты на файлы с соответствующим названием)
+css/pages/... - стили отдельных страниц
+
+
+Как читать префиксы:
+.m_ - блоки для мобильного отображения
+.l_ - блоки лэйаута
+.g_ - глобальные компоненты лэйаута
+
+
+Как читать классы:
+1. Используется БЭМ через символ подчёркивания;
+2. В качестве модификаторов используются классы без префиксов. Если класс без префикса, то его можно использовать только для модификатора;
+3. Если название класса очень длинное, например: .l_content__main__grid__sidebar__item, оно может быть сокращено в .LCMGSI__item, но должно быть при этом понятным из контекста (должно быть визуальное наследование в CSS);
+4. Используется визуальное наследование, например:
+	.block {  }
+		.block__element {  }
+			.block__element__item {  }
+5. Параметры класса записываются в одну строку, дабы не раздувать таблицу стилей и оставлять код читабельным.
+
+
+*/
+
+
 /* 1. Сброс margin и padding
 =========================================================== */
 *,
@@ -7,6 +39,8 @@
 
 /* 2. Фон страницы и шрифт основного текста
 =========================================================== */
+html,
+body { overflow: hidden; }
 html { height: 100%; background-color: #fff; font: normal normal 12px Arial; color: #333B3E; }
 	body { height: 100%; }
 
@@ -34,4 +68,51 @@ ul { list-style-type: none; }
 
 /* 5. Шрифты
 =========================================================== */
-@font-face {  }
+@font-face {/* Roboto Light */
+	font-family: 'roboto';
+	src: url('../fonts/roboto-lightcyrillicscha-webfont.eot');
+	src: url('../fonts/roboto-lightcyrillicscha-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/roboto-lightcyrillicscha-webfont.woff2') format('woff2'),
+	url('../fonts/roboto-lightcyrillicscha-webfont.woff') format('woff'),
+	url('../fonts/roboto-lightcyrillicscha-webfont.ttf') format('truetype');
+	font-weight: 200;
+	font-style: normal;
+}
+@font-face {/* Roboto Regular */
+	font-family: 'roboto';
+	src: url('../fonts/roboto-regular-webfont.eot');
+	src: url('../fonts/roboto-regular-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/roboto-regular-webfont.woff2') format('woff2'),
+	url('../fonts/roboto-regular-webfont.woff') format('woff'),
+	url('../fonts/roboto-regular-webfont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {/* Roboto Medium */
+	font-family: 'roboto';
+	src: url('../fonts/roboto-medium-webfont.eot');
+	src: url('../fonts/roboto-medium-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/roboto-medium-webfont.woff2') format('woff2'),
+	url('../fonts/roboto-medium-webfont.woff') format('woff'),
+	url('../fonts/roboto-medium-webfont.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {/* Roboto Bold */
+	font-family: 'roboto';
+	src: url('../fonts/roboto-bold-webfont.eot');
+	src: url('../fonts/roboto-bold-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/roboto-bold-webfont.woff2') format('woff2'),
+	url('../fonts/roboto-bold-webfont.woff') format('woff'),
+	url('../fonts/roboto-bold-webfont.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {/* Rouble */
+	font-family: 'rouble';
+	src: url('../fonts/PTRoubleSans.eot?#iefix') format('embedded-opentype'),  url('../fonts/PTRoubleSans.otf')  format('opentype'),
+	url('../fonts/PTRoubleSans.woff') format('woff'), url('../fonts/PTRoubleSans.ttf')  format('truetype'), url('../fonts/PTRoubleSans.svg#PTRoubleSans') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+.rouble_sign { font-family: 'rouble', sans-serif; }

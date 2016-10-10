@@ -5,11 +5,15 @@
 /* 2. Лэйаут
 =========================================================== */
 @import 'layout.css';
+@import 'layout_responsibility.css';
 
 /* 3. UI-элементы
 =========================================================== */
 @import 'components/chosen.css';/*Комбобокс*/
+@import 'components/balalayka.loader.css';/*Индикатор процесса*/
+@import 'components/balalayka.popup.css';/*Модальные окна*/
 
 
 /* 4. Стили отдельных страниц
 =========================================================== */
+/*@import 'pages/settings.css';*/

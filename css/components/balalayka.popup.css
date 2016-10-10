@@ -1,0 +1,55 @@
+/*
+
+
+Как использовать:
+1. Добавьте на элемент, при нажатии на который должно открыть модальное окно, атрибут data-bal-popup="xxx", где xxx - атрибут id модального окна;
+2. Добавьте в тег <body> код:
+    <div class="bal_popups_bg"></div> - добавляется один раз
+    <div class="bal_popup" id="xxx"> - добавляется столько раз, сколько у вас мод. окон (каждый со уникальным атрибутом id)
+        <button class="bal_popup__cross" data-bal-action="close" title="Закрыть"></button>
+        ...
+    </div>
+3. Мод. окно закрывается при клике на фон, при нажатии клавиши Esc, а также при нажатии на все элементы внутри модального окна, у которых есть атрибут data-bal-action="close".
+
+
+Вызов алерта.
+Функционал модального окна также предполагает вызов своего алерта на базе модального окна. Для этого:
+1. Добавьте в тег <body> код:
+    <div class="bal_popups_bg"></div>
+    <div class="bal_popup" id="alert">
+        <button class="bal_popup__cross" data-bal-action="close" title="Закрыть"></button>
+        <div class="bal_title h2"></div>
+	    <p class="bal_text"></p>
+    </div>
+2. Вызывайте алерт следующим кодом:
+    balAlert('Это заголовок сообщения', 'Это текст сообщения');
+
+
+*/
+
+
+/* Модальные окна
+=========================================================== */
+.bal_popups_bg { position: fixed; top: 0; right: 0; bottom: 0; left: 0; background-color: rgba(0,0,0,0.75); visibility: hidden; opacity: 0; z-index: 253; transition: 0.3s all; }
+.bal_popups_bg.open { visibility: visible; opacity: 1; }
+
+.bal_popup { position: fixed; top: 50px; left: 50%; width: 512px; max-height: 75%; padding: 20px 30px 30px; margin-left: -256px; background-color: #fff; border-radius: 3px; overflow-y: auto; visibility: hidden; opacity: 0; z-index: 254; transform: scale(0.5); transition: 0.3s all; }
+.bal_popup.open { top: 90px; visibility: visible; opacity: 1; transform: scale(1); }
+    .bal_popup__cross { position: absolute; top: 0; right: 0; width: 76px; height: 76px; background: url(../../img/icons/cross_black.png) center center no-repeat; background-size: 25px 25px; border: none; opacity: 0.3; transition: 0.2s all; }
+    .bal_popup__cross:hover { cursor: pointer; opacity: 0.7; }
+    .bal_popup__cross:active { opacity: 0.5; }
+
+    .bal_popup > .bal_title { padding-right: 38px; margin-top: 0; margin-bottom: 17px; }
+
+    .bal_popup > .bal_text { font-size: 16px; }
+
+
+/* Адаптивность
+=========================================================== */
+@media screen and (max-width: 1000px)
+{
+
+	.bal_popup { top: 100px; right: 10px; left: 10px; width: auto; max-height: 93%; margin-left: 0; transform: scale(0.5); transition: 0.3s all; }
+	.bal_popup.open { top: 10px; }
+
+}

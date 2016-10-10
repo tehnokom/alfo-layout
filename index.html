@@ -19,6 +19,8 @@
 
 		<!-- start: UI-элементы -->
 			<script src="js/components/chosen.jquery.js"></script><!-- Стилизованные комбобоксы -->
+			<script src="js/components/balalayka.loader.js"></script><!-- Индикатор процесса -->
+			<script src="js/components/balalayka.popup.js"></script><!-- Модальные окна -->
 		<!-- end: UI-элементы -->
 
 
@@ -28,23 +30,75 @@
 <body>
 
 
-<div class="base">
+<!-- Индикатор загрузки
+=========================================================== -->
+<div class="bal_loader" data-bal-role="page">
+	<div class="bal_loader__indicator"></div>
+</div>
+
+
+<!-- Модальные окна
+=========================================================== -->
+<div class="bal_popups_bg"></div>
+
+<div class="bal_popup" id="alert">
+	<button class="bal_popup__cross" data-bal-action="close" title="Закрыть"></button>
+	<div class="bal_title h2"></div>
+	<p class="bal_text"></p>
+</div>
+
+
+<!-- Мобильное меню
+=========================================================== -->
+<div class="m_sidebar" data-role="mobile_sidebar">
+	<div data-role="auth">
+		<nav class="m_sidebar__menu">
+			<a href="#" class="m_sidebar__menu__item">Моя страница</a>
+			<a href="#" class="m_sidebar__menu__item">Новости</a>
+			<a href="#" class="m_sidebar__menu__item">Сообщения</a>
+			<a href="#" class="m_sidebar__menu__item">Товарищи</a>
+			<a href="#" class="m_sidebar__menu__item">Труд</a>
+			<a href="#" class="m_sidebar__menu__item">Здоровье</a>
+			<a href="#" class="m_sidebar__menu__item">Сообщества</a>
+			<a href="#" class="m_sidebar__menu__item">Медиафайлы</a>
+			<a href="#" class="m_sidebar__menu__item">Знания</a>
+			<a href="#" class="m_sidebar__menu__item">Награды</a>
+			<a href="#" class="m_sidebar__menu__item">Волеизъявление</a>
+			<a href="#" class="m_sidebar__menu__item">Документы</a>
+			<a href="#" class="m_sidebar__menu__item">Закладки</a>
+			<a href="#" class="m_sidebar__menu__item">Игры</a>
+			<a href="#" class="m_sidebar__menu__item">Реклама</a>
+			<a href="#" class="m_sidebar__menu__item">Помощь</a>
+		</nav>
+	</div>
+</div>
+
+
+<!-- Общий контейнер
+=========================================================== -->
+<div class="l_base">
 
 	<!-- Шапка
 	=========================================================== -->
-	<header class="header">
-		
+	<header class="l_header">
+		<div class="g_inner">
+			<a class="m_menu_trigger" data-role="menu_trigger"><span></span></a>
+		</div>
 	</header>
 	
 	<!-- Контент
 	=========================================================== -->
-	<section class="content">
+	<div class="l_content">
+		<div class="g_inner">
+			<div class="l_content__main">
 
-	</section>
+			</div>
+		</div>
+	</div>
 	
 	<!-- Футер
 	=========================================================== -->
-	<footer class="footer">
+	<footer class="l_footer">
 		
 	</footer>
 	
