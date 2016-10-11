@@ -1,0 +1,21 @@
+/* Абзацы текста
+=========================================================== */
+.bal_text { margin: 15px 0; }
+.bal_text:first-child { margin-top: 0; }
+
+    /* Размеры */
+    .bal_text.small { font-size: 10px; }
+    .bal_text.big { font-size: 16px; }
+
+    /* Цвета */
+    .bal_text.white { color: #fff; text-shadow: 0 0 2px #000; }
+
+
+/* Адаптивность
+=========================================================== */
+@media screen and (max-width: 1000px)
+{
+
+
+
+}

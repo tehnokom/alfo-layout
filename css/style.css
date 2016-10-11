@@ -12,8 +12,12 @@
 @import 'components/chosen.css';/*Комбобокс*/
 @import 'components/balalayka.loader.css';/*Индикатор процесса*/
 @import 'components/balalayka.popup.css';/*Модальные окна*/
+@import 'components/balalayka.line.css';/*Горизонтальный разделитель (линия)*/
+@import 'components/balalayka.title.css';/*Заголовки*/
+@import 'components/balalayka.text.css';/*Абзацы текста*/
+@import 'components/balalayka.button.css';/*Кнопки*/
 
 
 /* 4. Стили отдельных страниц
 =========================================================== */
-/*@import 'pages/settings.css';*/
+@import 'pages/profile.css';

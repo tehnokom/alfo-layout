@@ -10,7 +10,7 @@
 =========================================================== */
 html,
 body { overflow: hidden; }
-html { height: 100%; background-color: #fff; font: normal normal 12px Arial; color: #333B3E; }
+html { height: 100%; background-color: #fff; font: normal normal 12px 'roboto', Arial, sans-serif; color: #000; }
 	body { height: 100%; }
 
 
@@ -24,8 +24,8 @@ mark { display: inline; }
 =========================================================== */
 h1:first-child, h2:first-child { margin-top: 0; }
 
-a { color: #66757C; }
-a:hover { color: #5EA4CB; }
+a { color: #007BAC; text-decoration: none; }
+a:hover { color: #007BAC; background: rgba(0,0,0,0.1); }
 
 	a > img { border: 0; }
 
@@ -33,6 +33,12 @@ table { border-spacing: 0; border-collapse: collapse; }
 	table td { vertical-align: top; }
 
 ul { list-style-type: none; }
+
+select,
+option,
+input,
+button,
+textarea { font: normal normal 12px 'roboto', Arial, sans-serif; color: #000; }
 
 
 /* 5. Шрифты

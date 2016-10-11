@@ -3,9 +3,14 @@
 .m_sidebar { display: none; }
 
 
-/* Блок по центру
+/* Глобальные блоки
 =========================================================== */
-.g_inner { position: relative; min-width: 280px; max-width: 1920px; height: 100%; padding: 0 17px; margin: 0 auto; }
+.g_inner { position: relative; min-width: 280px; max-width: 934px; height: 100%; padding: 0 17px; margin: 0 auto; }
+
+.g_grid { display: table; width: 100%; }
+	.g_grid > * { display: table-cell; vertical-align: top; }
+	.g_grid__sidebar { width: 150px; padding-right: 14px; }
+	.g_grid__content {  }
 
 
 /* Общий контейнер
@@ -15,15 +20,26 @@
 
 	/* Шапка
 	=========================================================== */
-	.l_header { position: fixed; top: 0; right: 0; left: 0; height: 60px; background: #0A3243 url(../img/space.jpg) center 65% no-repeat; background-size: cover; box-shadow: 0 0 14px rgba(0,0,0,0.7); z-index: 10; transition: 0.3s all; }
+	.l_header { position: fixed; top: 0; right: 0; left: 0; height: 42px; background: #007BAC /*url(../img/space.jpg) center 65% no-repeat*/; background-size: cover; z-index: 10; transition: 0.3s all; }
+		.l_header__logo { position: absolute; top: 0; left: 17px; bottom: 0; font-size: 22px; color: #fff; text-transform: uppercase; letter-spacing: 2px; line-height: 40px; }
+		.l_header__search { position: absolute; top: 50%; left: 164px; width: 200px; height: 32px; margin-top: -16px; }
+			.l_header__search > input { width: 100%; height: 32px; padding: 0 10px; background: rgba(0,0,0,0.15); border: none; border-radius: 5px; }
 
 
 	/* Контент
 	=========================================================== */
-	.l_content { position: relative; width: 100%; min-height: 100%; padding: 70px 0 10px; margin: 0; z-index: 5; transition: 0.3s all; background-color: #ddd; }
+	.l_content { position: relative; width: 100%; min-height: 100%; padding: 54px 0 12px; margin: 0; z-index: 5; transition: 0.3s all; background-color: #EDEEF0; }
 
 		.l_content > .g_inner {  }
 			.l_content__main {  }
+
+				/* Меню */
+				.menu {  }
+					.menu__item { display: block; position: relative; padding: 7px 7px 7px 32px; margin-left: -7px; border-radius: 3px; transition: 0.2s all; }
+					.menu__item:hover { background-color: rgba(0,123,172,0.1); }
+					.menu__item:active { color: #fff; background-color: rgba(0,123,172,0.4); }
+						.menu__item::before { display: block; position: absolute; content: ' '; top: 50%; left: 7px; width: 18px; height: 18px; margin-top: -9px; background-color: rgba(0,123,172,0.2); border-radius: 100%; }
+					.menu > .bal_line { margin-right: 0; margin-left: 25px; }
 
 
 	/* Футер

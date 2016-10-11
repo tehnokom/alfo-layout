@@ -1,0 +1,25 @@
+/* Заголовки
+=========================================================== */
+.bal_title { margin: 30px 0 15px; font-weight: normal; }
+.bal_title:first-child { margin-top: 0; }
+
+    /* Размеры */
+    .bal_title.h1 { font-size: 24px; }
+    .bal_title.h2 { font-size: 20px; }
+    .bal_title.h3 { font-size: 18px; }
+    .bal_title.h4 { font-size: 16px; }
+    .bal_title.h5 { font-size: 14px; }
+    .bal_title.h6 { font-size: 12px; }
+
+    /* Цвета */
+    .bal_title.white { color: #fff; text-shadow: 0 0 2px #000; }
+
+
+/* Адаптивность
+=========================================================== */
+@media screen and (max-width: 1000px)
+{
+
+
+
+}
