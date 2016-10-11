@@ -1,28 +1,3 @@
-/*
-
-
-Как использовать индикатор процесса для страницы:
-1. Поместите внутрь <body> код:
-    <div class="bal_loader" data-bal-role="page">
-        <div class="bal_loader__indicator"></div>
-    </div>
-2. Подключите balalayka.loader.js;
-3. Лоадер появится при открытии страницы и скроется после полной её загрузки.
-
-
-Для элемента:
-1. Поместите внутрь элемента код:
-    <div class="bal_loader" data-bal-role="element">
-        <div class="bal_loader__indicator"></div>
-    </div>
-2. Проследите, чтобы у самого этого элемента был position: relative | absolute | fixed;
-3. Запускайте индикатор процесса, добавив к нему класс loading;
-4. Останавливайте, убрав класс loading.
-
-
-*/
-
-
 /* Индикатор загрузки
 =========================================================== */
 .bal_loader { top: 0; right: 0; bottom: 0; left: 0; visibility: hidden; opacity: 0; background-color: rgba(0,0,0,0.75); z-index: 255; transition: 0.2s all; }

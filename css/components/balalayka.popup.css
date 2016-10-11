@@ -1,33 +1,3 @@
-/*
-
-
-Как использовать:
-1. Добавьте на элемент, при нажатии на который должно открыть модальное окно, атрибут data-bal-popup="xxx", где xxx - атрибут id модального окна;
-2. Добавьте в тег <body> код:
-    <div class="bal_popups_bg"></div> - добавляется один раз
-    <div class="bal_popup" id="xxx"> - добавляется столько раз, сколько у вас мод. окон (каждый со уникальным атрибутом id)
-        <button class="bal_popup__cross" data-bal-action="close" title="Закрыть"></button>
-        ...
-    </div>
-3. Мод. окно закрывается при клике на фон, при нажатии клавиши Esc, а также при нажатии на все элементы внутри модального окна, у которых есть атрибут data-bal-action="close".
-
-
-Вызов алерта.
-Функционал модального окна также предполагает вызов своего алерта на базе модального окна. Для этого:
-1. Добавьте в тег <body> код:
-    <div class="bal_popups_bg"></div>
-    <div class="bal_popup" id="alert">
-        <button class="bal_popup__cross" data-bal-action="close" title="Закрыть"></button>
-        <div class="bal_title h2"></div>
-	    <p class="bal_text"></p>
-    </div>
-2. Вызывайте алерт следующим кодом:
-    balAlert('Это заголовок сообщения', 'Это текст сообщения');
-
-
-*/
-
-
 /* Модальные окна
 =========================================================== */
 .bal_popups_bg { position: fixed; top: 0; right: 0; bottom: 0; left: 0; background-color: rgba(0,0,0,0.75); visibility: hidden; opacity: 0; z-index: 253; transition: 0.3s all; }
