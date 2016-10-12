@@ -5,7 +5,8 @@
 /* 2. Лэйаут
 =========================================================== */
 @import 'layout.css';
-@import 'layout_responsibility.css';
+@import 'layout_pad.css';
+@import 'layout_phone.css';
 
 /* 3. UI-элементы
 =========================================================== */
@@ -16,6 +17,8 @@
 @import 'components/balalayka.title.css';/*Заголовки*/
 @import 'components/balalayka.text.css';/*Абзацы текста*/
 @import 'components/balalayka.button.css';/*Кнопки*/
+@import 'components/balalayka.input.css';/*Текстовые поля*/
+@import 'components/tkom.media.css';/*Блоки медиа-контента (краткий просмотр)*/
 
 
 /* 4. Стили отдельных страниц

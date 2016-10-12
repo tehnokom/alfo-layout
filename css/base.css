@@ -9,7 +9,7 @@
 /* 2. Фон страницы и шрифт основного текста
 =========================================================== */
 html,
-body { overflow: hidden; }
+body { overflow-x: hidden; }
 html { height: 100%; background-color: #fff; font: normal normal 12px 'roboto', Arial, sans-serif; color: #000; }
 	body { height: 100%; }
 
@@ -25,7 +25,7 @@ mark { display: inline; }
 h1:first-child, h2:first-child { margin-top: 0; }
 
 a { color: #007BAC; text-decoration: none; }
-a:hover { color: #007BAC; background: rgba(0,0,0,0.1); }
+a:hover { color: #007BAC; }
 
 	a > img { border: 0; }
 

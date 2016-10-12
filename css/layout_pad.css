@@ -1,22 +1,30 @@
 /* Адаптивность
 =========================================================== */
-@media screen and (max-width: 1000px)
+@media screen and (max-width: 934px)
 {
 
 
 	/* Мобильное меню
 	=========================================================== */
-    .m_sidebar { display: block; position: fixed; top: 0; bottom: 0; left: -250px; width: 250px; padding: 11px 0 20px 0; white-space: nowrap; background-color: #005678; overflow-x: hidden; overflow-y: auto; box-shadow: inset -30px 0 30px -30px rgba(0,0,0,0.5); transition: 0.3s all; }
+    .m_sidebar { display: block; position: fixed; top: 0; bottom: 0; left: -220px; width: 220px; padding: 11px 0 20px 0; white-space: nowrap; background-color: #005678; overflow-x: hidden; overflow-y: auto; box-shadow: inset -30px 0 30px -30px rgba(0,0,0,0.5); transition: 0.3s all; }
     .m_sidebar.open { left: 0; }
+
+		[data-role="for_phone"] { display: none; }
 
         .m_sidebar > * { margin-left: 300px; opacity: 0; transition: 0.3s all; }
         .m_sidebar.open > * { margin-left: 0; opacity: 1; }
 
         .m_sidebar__menu { position: relative; margin-bottom: 15px; }
-            .m_sidebar__menu__item { display: block; position: relative; height: 40px; padding: 0 20px; font-size: 16px; color: #fff; line-height: 40px; text-decoration: none; }
+            .m_sidebar__menu__item { display: block; position: relative; height: 36px; padding: 0 20px 0 45px; font-size: 16px; color: #fff; line-height: 36px; text-decoration: none; }
 			.m_sidebar__menu__item:hover { cursor: pointer; color: #fff; background-color: rgba(41,171,226,0.15); }
 			.m_sidebar__menu__item:active { color: #fff; background-color: rgba(0,0,0,0.3); }
 			.m_sidebar__menu__item.active { cursor: default; color: #fff; background-color: rgba(41,171,226,0.5); }
+				.m_sidebar__menu__item::before { display: block; position: absolute; content: ' '; top: 50%; left: 20px; width: 18px; height: 18px; margin-top: -9px; background-color: rgba(255,255,255,0.2); border-radius: 100%; }
+
+				.m_sidebar__menu > .bal_line { margin-right: 20px; margin-left: 45px; border-top-color: rgba(255,255,255,0.15); }
+
+			.m_sidebar__menu__search { height: 39px; padding: 0 20px; margin-bottom: 10px; }
+				.m_sidebar__menu__search > .bal_input { width: 100%; height: 39px; }
 
 
 	/* Глобальные блоки
@@ -31,13 +39,13 @@
 	/* Основной блок
 	=========================================================== */
 	.l_base { position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: auto; height: auto; transition: 0.3s all; }
-	.m_sidebar.open + .l_base { right: -250px; left: 250px; }
+	.m_sidebar.open + .l_base { right: -220px; left: 220px; }
 
 
 		/* Шапка
 		=========================================================== */
 		.l_header { height: 60px; transition: 0.3s all; }
-		.m_sidebar.open + .l_base .l_header { right: -250px; left: 250px; }
+		.m_sidebar.open + .l_base .l_header { right: -220px; left: 220px; }
 			.l_header > .g_inner { height: 60px; }
 
 				.m_menu_trigger { display: block; position: absolute; top: 0; bottom: 0; left: 0; width: 60px; background: none; border: none; transition: 0.3s all; }
@@ -65,6 +73,8 @@
 
 				.l_header__logo { left: 50%; width: 200px; margin-left: -100px; text-align: center; line-height: 58px; }
 				.l_header__search { display: none; }
+				.l_header__right { }
+					.l_header__right > a { height: 60px; line-height: 60px; }
 
 
 		/* Контент

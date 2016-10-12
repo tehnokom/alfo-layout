@@ -1,24 +1,28 @@
 /* Кнопки
 =========================================================== */
-.bal_button { display: inline-block; vertical-align: middle; padding: 3px 10px 5px; color: #fff; text-align: center; background: #007BAC; border: none; border-radius: 3px; transition: 0.2s all; }
+.bal_button { display: inline-block; vertical-align: middle; height: 32px; padding: 0 10px; font-size: 14px; color: #fff; text-align: center; line-height: 30px; background: #007BAC; border: none; border-radius: 3px; transition: 0.2s all; }
 .bal_button:hover { box-shadow: inset 0 0 50px 50px rgba(255,255,255,0.15); }
 .bal_button:active { box-shadow: inset 0 0 50px 50px rgba(0,0,0,0.15); }
 
-    .bal_button > span { display: block; font-size: 8px; line-height: 10px; }
-
     /* Размеры */
-    .bal_button.big { padding-top: 0; padding-bottom: 0; font-size: 18px; }
-        .bal_button.big > span { margin-bottom: 7px; font-size: 10px; line-height: 6px; opacity: 0.7; }
+    .bal_button.big { height: 42px; font-size: 18px; line-height: 40px; }
 
     /* Цвета */
     .bal_button.white { color: #007BAC; background-color: #fff; }
     .bal_button.white:hover { color: #fff; box-shadow: inset 0 0 50px 50px rgba(0,123,172,0.7); }
     .bal_button.white:active { color: #fff; box-shadow: inset 0 0 50px 50px rgba(0,123,172,1); }
 
+    /* В 2 строки */
+    .bal_button.two_strings { line-height: 22px; }
+        .bal_button.two_strings > span { display: block; font-size: 8px; line-height: 2px; }
+
+    .bal_button.two_strings.big { line-height: 28px; }
+        .bal_button.two_strings.big > span { font-size: 10px; line-height: 6px; opacity: 0.7; }
+
 
 /* Адаптивность
 =========================================================== */
-@media screen and (max-width: 1000px)
+@media screen and (max-width: 934px)
 {
 
 

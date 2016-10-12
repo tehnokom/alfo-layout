@@ -1,0 +1,27 @@
+/* Текстовые поля
+=========================================================== */
+.bal_input { height: 32px; padding: 0 10px; font-size: 14px; color: #000; background: none; border: 1px solid #999; border-radius: 5px; transition: 0.2s all; }
+.bal_input:hover { border-color: #777; }
+.bal_input:focus { border-color: #007BAC; }
+.bal_input::-webkit-input-placeholder { color: #999; }
+.bal_input::-moz-placeholder { color: #999; }
+
+    /* Размеры */
+    .bal_input.big { height: 42px; }
+
+    /* Цвета */
+    .bal_input.dark { color: #fff; background: rgba(0,0,0,0.15); border: none; }
+    .bal_input.dark:hover { background-color: rgba(0,0,0,0.1); }
+    .bal_input.dark:focus { color: #000; background-color: #fff; }
+    .bal_input.dark::-webkit-input-placeholder { color: #fff; }
+    .bal_input.dark::-moz-placeholder { color: #fff; }
+
+
+/* Адаптивность
+=========================================================== */
+@media screen and (max-width: 934px)
+{
+
+
+
+}

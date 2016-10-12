@@ -16,7 +16,15 @@
 
 /* Адаптивность
 =========================================================== */
-@media screen and (max-width: 1000px)
+@media screen and (max-width: 934px)
+{
+
+
+
+}
+
+
+@media screen and (max-width: 630px)
 {
 
 	.bal_popup { top: 100px; right: 10px; left: 10px; width: auto; max-height: 93%; margin-left: 0; transform: scale(0.5); transition: 0.3s all; }
