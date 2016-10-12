@@ -9,7 +9,7 @@
 /* 2. Фон страницы и шрифт основного текста
 =========================================================== */
 html,
-body { overflow-x: hidden; }
+body { overflow: hidden; }
 html { height: 100%; background-color: #fff; font: normal normal 12px 'roboto', Arial, sans-serif; color: #000; }
 	body { height: 100%; }
 

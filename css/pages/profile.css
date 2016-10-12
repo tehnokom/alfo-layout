@@ -7,7 +7,7 @@
     .profile__grid { display: table; width: 100%; margin-top: -124px; }
         .profile__grid > * { display: table-cell; vertical-align: top; }
         .profile__grid__left { width: 244px; padding: 0 14px 0 0; }
-            .profile__grid__left__image { width: 184px; margin-bottom: 14px; margin-left: 46px; font-size: 0; border: 2px solid #fff; border-radius: 5px; }
+            .profile__grid__left__image { width: 184px; margin-bottom: 14px; margin-left: 46px; font-size: 0; overflow: hidden; border: 1px solid #fff; border-radius: 5px; }
                 .profile__grid__left__image > img { vertical-align: middle; width: 100%; border-radius: 3px; }
 
         .profile__grid__right {  }
@@ -42,11 +42,11 @@
 
         .profile__grid__left { width: auto; padding-right: 0; }
             .profile__grid__left__image { width: 100px; margin: 10px; }
-            .profile__grid__left__sources { position: absolute; top: 242px; right: 0; left: 0; height: 164px; overflow: hidden; }
-                .profile__grid__left__sources__scroll { width: 100%; height: 184px; padding: 0 12px; font-size: 0; white-space: nowrap; overflow-y: hidden; overflow-x: scroll; }
-                    .profile__grid__left__sources__scroll > .tkom_media { display: inline-block; width: 160px; margin: 0 5px; }
+            .profile__grid__left__sources { position: absolute; top: 256px; right: 0; left: 0; height: 104px; overflow: hidden; }
+                .profile__grid__left__sources__scroll { width: 100%; height: 124px; padding: 0 15px; font-size: 0; white-space: nowrap; overflow-y: hidden; overflow-x: scroll; }
+                    .profile__grid__left__sources__scroll > .tkom_media { display: inline-block; width: 160px; margin: 0 2px; }
                         .profile__grid__left__sources__scroll > .tkom_media > .tkom_media__item { display: none; }
-                        .profile__grid__left__sources__scroll > .tkom_media > .tkom_media__item.first { display: block; }
+                        .profile__grid__left__sources__scroll > .tkom_media > .tkom_media__item.first { display: block; height: 60px; }
 
 
         .profile__grid__right {  }
@@ -55,6 +55,6 @@
             .profile__grid__right__numbers { margin-top: 16px; white-space: nowrap; }
                 .profile__grid__right__numbers > .bal_button { padding: 0 7px; margin-right: 5px; }
 
-            .profile__grid__right__wall { padding-top: 202px; padding-left: 0; }
+            .profile__grid__right__wall { padding-top: 142px; padding-left: 0; }
 
 }

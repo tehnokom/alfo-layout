@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width"/>
+		<link href="img/favicon.png" rel="icon" type="image/x-icon"/>
+
+		<meta name="keywords" lang="ru" content=""/>
+		<meta name="description" lang="ru" content=""/>
+
+		<title>Владимир Левадный | Техноком</title>
+
+		<link rel="stylesheet" href="css/style.css"/>
+		<link rel="stylesheet" href="css/pages/profile.css"/>
+
+		<script src="js/html5.js"></script><!-- Создание новых тегов в старых браузерах -->
+		<script src="js/jquery.min.js"></script><!-- jQuery -->
+
+
+		<!-- start: UI-элементы -->
+			<script src="js/components/chosen.jquery.js"></script><!-- Стилизованные комбобоксы -->
+			<script src="js/components/balalayka.loader.js"></script><!-- Индикатор процесса -->
+			<script src="js/components/balalayka.popup.js"></script><!-- Модальные окна -->
+		<!-- end: UI-элементы -->
+
+
+		<script src="js/app.js"></script><!-- Приложение -->
+
+	</head>
+<body>
+
+
+<!-- Индикатор загрузки
+=========================================================== -->
+<div class="bal_loader" data-bal-role="page">
+	<div class="bal_loader__indicator"></div>
+</div>
+
+
+<!-- Модальные окна
+=========================================================== -->
+<div class="bal_popups_bg"></div>
+
+<div class="bal_popup" id="alert">
+	<button class="bal_popup__cross" data-bal-action="close" title="Закрыть"></button>
+	<div class="bal_title h2"></div>
+	<p class="bal_text"></p>
+</div>
+
+
+<!-- Мобильное меню
+=========================================================== -->
+<div class="m_sidebar" data-role="mobile_sidebar">
+	<div data-role="auth">
+		<nav class="m_sidebar__menu">
+			<div class="m_sidebar__menu__search">
+				<input type="text" placeholder="Поиск" class="bal_input dark"/>
+			</div>
+			<a href="#" class="m_sidebar__menu__item" data-role="for_phone">Поехали!</a>
+			<a href="#" class="m_sidebar__menu__item" data-role="for_phone">Энциклопедия</a>
+			<div class="bal_line" data-role="for_phone"></div>
+			<a href="#" class="m_sidebar__menu__item">Моя страница</a>
+			<a href="#" class="m_sidebar__menu__item">Новости</a>
+			<a href="#" class="m_sidebar__menu__item">Сообщения</a>
+			<a href="#" class="m_sidebar__menu__item">Товарищи</a>
+			<a href="#" class="m_sidebar__menu__item">Труд</a>
+			<a href="#" class="m_sidebar__menu__item">Здоровье</a>
+			<a href="#" class="m_sidebar__menu__item">Сообщества</a>
+			<a href="#" class="m_sidebar__menu__item">Медиафайлы</a>
+			<a href="#" class="m_sidebar__menu__item">Знания</a>
+			<div class="bal_line"></div>
+			<a href="#" class="m_sidebar__menu__item">Награды</a>
+			<a href="#" class="m_sidebar__menu__item">Волеизъявление</a>
+			<a href="#" class="m_sidebar__menu__item">Документы</a>
+			<a href="#" class="m_sidebar__menu__item">Закладки</a>
+			<a href="#" class="m_sidebar__menu__item">Игры</a>
+			<a href="#" class="m_sidebar__menu__item">Реклама</a>
+			<a href="#" class="m_sidebar__menu__item">Помощь</a>
+		</nav>
+	</div>
+</div>
+
+
+<!-- Общий контейнер
+=========================================================== -->
+<div class="l_base">
+
+	<!-- Шапка
+	=========================================================== -->
+	<header class="l_header">
+		<div class="g_inner">
+			<a class="m_menu_trigger" data-role="menu_trigger"><span></span></a>
+			<a href="" class="l_header__logo">Техноком</a>
+			<div class="l_header__search">
+				<input type="text" placeholder="Поиск" class="bal_input dark"/>
+			</div>
+			<div class="l_header__right">
+				<a href="#">Поехали!</a>
+				<a href="#">Энциклопедия</a>
+			</div>
+		</div>
+	</header>
+	
+	<!-- Контент
+	=========================================================== -->
+	<div class="l_content">
+		<div class="g_inner">
+			<div class="l_content__main">
+
+				<div class="g_grid">
+
+					<aside class="g_grid__sidebar" data-role="desktop_menu">
+						<nav class="menu">
+							<a href="#" class="menu__item">Моя страница</a>
+							<a href="#" class="menu__item">Новости</a>
+							<a href="#" class="menu__item">Сообщения</a>
+							<a href="#" class="menu__item">Товарищи</a>
+							<a href="#" class="menu__item">Труд</a>
+							<a href="#" class="menu__item">Здоровье</a>
+							<a href="#" class="menu__item">Сообщества</a>
+							<a href="#" class="menu__item">Медиафайлы</a>
+							<a href="#" class="menu__item">Знания</a>
+							<div class="bal_line"></div>
+							<a href="#" class="menu__item">Награды</a>
+							<a href="#" class="menu__item">Волеизъявление</a>
+							<a href="#" class="menu__item">Документы</a>
+							<a href="#" class="menu__item">Закладки</a>
+							<a href="#" class="menu__item">Игры</a>
+							<a href="#" class="menu__item">Реклама</a>
+							<a href="#" class="menu__item">Помощь</a>
+						</nav>
+					</aside>
+
+					<div class="g_grid__content">
+
+						<div class="profile">
+
+							<div class="profile__cover" style="background-image: url(img/_temp/profile_cover.jpg);"></div><!--Фон задаётся через background-image инлайново для каждого профиля-->
+
+							<div class="profile__grid">
+
+								<aside class="profile__grid__left">
+
+									<div class="profile__grid__left__image">
+										<img src="img/_temp/profile_image.jpg" alt="Владимир Левадный... Мы — коммунисты, гости из будущего в этом мире"/>
+									</div>
+
+									<div class="profile__grid__left__sources">
+										<div class="profile__grid__left__sources__scroll">
+
+											<div class="tkom_media">
+												<div class="tkom_media__title">
+													<a href="#">Товарищи в сети</a>
+													<i>634</i>
+												</div>
+												<div class="tkom_media__item first">
+
+												</div>
+												<div class="tkom_media__item">
+
+												</div>
+											</div>
+
+											<div class="tkom_media">
+												<div class="tkom_media__title">
+													<a href="#">Фотоальбомы</a>
+													<i>26</i>
+												</div>
+												<div class="tkom_media__item first">
+
+												</div>
+												<div class="tkom_media__item">
+
+												</div>
+											</div>
+
+											<div class="tkom_media">
+												<div class="tkom_media__title">
+													<a href="#">Видеозаписи</a>
+													<i>83</i>
+												</div>
+												<div class="tkom_media__item first">
+
+												</div>
+												<div class="tkom_media__item">
+
+												</div>
+											</div>
+
+										</div>
+									</div>
+
+								</aside>
+
+								<div class="profile__grid__right">
+
+									<h1 class="bal_title h1 white">Владимир Левадный</h1>
+									<p class="bal_text white">Мы — коммунисты, гости из будущего в этом мире</p>
+
+									<div class="profile__grid__right__numbers">
+										<a href="#" class="bal_button two_strings big white">
+											4897
+											<span>товарищей</span>
+										</a>
+										<a href="#" class="bal_button two_strings big white">
+											84 073
+											<span>подписчика</span>
+										</a>
+										<a href="#" class="bal_button two_strings big white">
+											75
+											<span>проектов</span>
+										</a>
+									</div>
+
+									<div class="profile__grid__right__wall">
+
+										<div class="tkom_media">
+											<div class="tkom_media__title">
+												<a href="#">Запись на стене</a>
+											</div>
+											<div class="tkom_media__item">
+
+											</div>
+										</div>
+
+										<div class="tkom_media">
+											<div class="tkom_media__title">
+												<a href="#">Запись на стене</a>
+											</div>
+											<div class="tkom_media__item">
+
+											</div>
+										</div>
+
+										<div class="tkom_media">
+											<div class="tkom_media__title">
+												<a href="#">Запись на стене</a>
+											</div>
+											<div class="tkom_media__item">
+
+											</div>
+										</div>
+
+										<div class="tkom_media">
+											<div class="tkom_media__title">
+												<a href="#">Запись на стене</a>
+											</div>
+											<div class="tkom_media__item">
+
+											</div>
+										</div>
+
+										<div class="tkom_media">
+											<div class="tkom_media__title">
+												<a href="#">Запись на стене</a>
+											</div>
+											<div class="tkom_media__item">
+
+											</div>
+										</div>
+
+										<div class="tkom_media">
+											<div class="tkom_media__title">
+												<a href="#">Запись на стене</a>
+											</div>
+											<div class="tkom_media__item">
+
+											</div>
+										</div>
+
+										<div class="tkom_media">
+											<div class="tkom_media__title">
+												<a href="#">Запись на стене</a>
+											</div>
+											<div class="tkom_media__item">
+
+											</div>
+										</div>
+
+										<div class="tkom_media">
+											<div class="tkom_media__title">
+												<a href="#">Запись на стене</a>
+											</div>
+											<div class="tkom_media__item">
+
+											</div>
+										</div>
+
+										<div class="tkom_media">
+											<div class="tkom_media__title">
+												<a href="#">Запись на стене</a>
+											</div>
+											<div class="tkom_media__item">
+
+											</div>
+										</div>
+
+										<div class="tkom_media">
+											<div class="tkom_media__title">
+												<a href="#">Запись на стене</a>
+											</div>
+											<div class="tkom_media__item">
+
+											</div>
+										</div>
+
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+	
+	<!-- Футер
+	=========================================================== -->
+	<footer class="l_footer">
+		
+	</footer>
+	
+</div>
+
+
+</body>
+</html>

@@ -79,7 +79,8 @@
 
 		/* Контент
 		=========================================================== */
-		.l_content { padding-top: 72px; }
+		.l_content { top: 60px; }
+		.m_sidebar.open + .l_base .l_content { right: -220px; left: 220px; }
 
 			.l_content > .g_inner {  }
 				.l_content__main {  }
